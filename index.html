@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وادي كنس</title>
+    <style>
+        /* التنسيقات العامة */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+            direction: rtl;
+        }
+
+        /* الهيدر / الشريط العلوي */
+        header {
+            background-color: #1e293b;
+            color: #fff;
+            padding: 25px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            color: #f8fafc;
+        }
+
+        header p {
+            color: #94a3b8;
+            font-size: 1rem;
+        }
+
+        /* الحاوية الرئيسية للمنتجات */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* بطاقات المنتجات */
+        .product-card {
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        /* صورة المنتج */
+        .product-image {
+            width: 100%;
+            height: 220px;
+            background-color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* تفاصيل المنتج */
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        .product-description {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #16a34a;
+            margin-bottom: 15px;
+        }
+
+        /* زر عرض الصور */
+        .btn-buy {
+            display: inline-block;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #2563eb;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+            margin-bottom: 8px;
+        }
+
+        .btn-buy:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* زر الاتصال */
+        .btn-call {
+            display: inline-block;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #16a34a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-call:hover {
+            background-color: #15803d;
+        }
+
+        /* التذيل / Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            color: #64748b;
+            font-size: 0.85rem;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>وادي كنس</h1>
+        <p>منصتك الأولى لبيع وشراء مختلف السلع والمنتجات</p>
+    </header>
+
+    <div class="container">
+        <div class="products-grid">
+
+            <!-- المنتج الأول: ردمي نوت 14 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <a href="https://www.google.com/search?client=ms-android-xiaomi-terr2-rso2&hs=p5Jq&sca_esv=b6aeedf00edc55b8&sxsrf=APpeQnuHkPJmtDq28UphF9A3tIrbZGjBYQ:1784982979380&udm=2&fbs=ABfTbFVK8jXqhWzk-gfKMyfOkM--wvW54exACfrp2QcHIvoqakxTitjh0y56Xq08I48TXIXCefmqYE50A2X99XNUbAFPk2fpfoxb0tn6WZxTN88Pu0oOr2zIE1ZX-WLKKHyFZ1jDPNsvv1ZW0_kUy5kK2HtVditm0K85Y-PTvXoOmcfWWRP8r3FWrnQ5WGEq5FH6tSWJyZLKSAswp0A70Zy-NJV03euOs_4UJlW8jRzKGZqkOE3xwaESiPjC20CDNVIpMnP-N1Bh3_72dS2K4ig94b_Axmw0HQ&q=%D8%B1%D9%8A%D8%AF%D9%82%D9%8A+%D9%86%D9%88%D8%AA+14&sa=X&sqi=2&ved=2ahUKEwiV2anj6-2VAxXH9QIHHVHHGR8QtKgLegQIExAB&biw=384&bih=742&dpr=2.81" target="_blank">
+                        <img src="https://via.placeholder.com/300x220?text=Redmi+Note+14" alt="ردمي نوت 14">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <div class="product-title">ردمي نوت 14 (Redmi Note 14)</div>
+                    <p class="product-description">هاتف ذكي ممتاز للتصفح والاستخدام اليومي.</p>
+                    <div class="product-price">14 دولار</div>
+                    <a href="https://www.google.com/search?client=ms-android-xiaomi-terr2-rso2&hs=p5Jq&sca_esv=b6aeedf00edc55b8&sxsrf=APpeQnuHkPJmtDq28UphF9A3tIrbZGjBYQ:1784982979380&udm=2&fbs=ABfTbFVK8jXqhWzk-gfKMyfOkM--wvW54exACfrp2QcHIvoqakxTitjh0y56Xq08I48TXIXCefmqYE50A2X99XNUbAFPk2fpfoxb0tn6WZxTN88Pu0oOr2zIE1ZX-WLKKHyFZ1jDPNsvv1ZW0_kUy5kK2HtVditm0K85Y-PTvXoOmcfWWRP8r3FWrnQ5WGEq5FH6tSWJyZLKSAswp0A70Zy-NJV03euOs_4UJlW8jRzKGZqkOE3xwaESiPjC20CDNVIpMnP-N1Bh3_72dS2K4ig94b_Axmw0HQ&q=%D8%B1%D9%8A%D8%AF%D9%82%D9%8A+%D9%86%D9%88%D8%AA+14&sa=X&sqi=2&ved=2ahUKEwiV2anj6-2VAxXH9QIHHVHHGR8QtKgLegQIExAB&biw=384&bih=742&dpr=2.81" target="_blank" class="btn-buy">عرض الصور</a>
+                    <a href="tel:0541351393" class="btn-call">اتصل لطلب المنتج</a>
+                </div>
+            </div>
+
+            <!-- المنتج الثاني: ايفون 14 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <a href="https://www.google.com/search?q=%D8%A7%D9%8A%D9%81%D9%88%D9%8BD+14&client=ms-android-xiaomi-terr2-rso2&hs=BleV&sca_esv=b6aeedf00edc55b8&udm=2&biw=384&bih=742&sxsrf=APpeQnuYR9Twu_pMl55bUQUfYb1dlUGguQ%3A1784982980944&ei=xK1kapmkObKyi-gPhYvDyAo&oq=m%D8%A7%D9%8A%D9%81%D9%88%D9%8BD+14&gs_lp=EhJtb2JpbGUtZ3dzLXdpei1pbWciDm3Yp9mK2YHZiNmGIDE0KgIIADIKEAAYgAQYDRixAzIHEAAYgAQYDTIHEAAYgAQYDTIHEAAYgAQYDTIHEAAYgAQYDUjnMlDjBVjRKnABeACQAQOYAboBoAHCGaoBBDAuMjG4AQHIAQD4AQGYAgygAq0OqAIFwgIHECMYyQIYJ8ICChAAGIAEGIoFGEPCAgoQIxjJAhjqAhgnwgIIEAAYgAQYsQPCAgUQABiABMICCxAAGIAEGLEDGIMBwgIGEAAYHhgKwgIMEAAYgAQYChgLGLEDwgIJEAAYgAQYChgLwgIPEAAYgAQYChgLGLEDGIMBwgINEAAYgAQYDRixAxiDAcICBhAAGB4YDcICCBAAGAgYHhgNmAMLiAYBkgcGMS4xMC4xoAfvOrIHBjAuMTAuMbgHoQ7CBwcyLTUuNi4xyAdxgAgB&sclient=mobile-gws-wiz-img" target="_blank">
+                        <img src="https://via.placeholder.com/300x220?text=iPhone+14" alt="ايفون 14">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <div class="product-title">ايفون 14 (iPhone 14)</div>
+                    <p class="product-description">هاتف أبل بتصميم مميز وأداء عالي.</p>
+                    <div class="product-price">15 دولار</div>
+                    <a href="https://www.google.com/search?q=%D8%A7%D9%8A%D9%81%D9%88%D9%8BD+14&client=ms-android-xiaomi-terr2-rso2&hs=BleV&sca_esv=b6aeedf00edc55b8&udm=2&biw=384&bih=742&sxsrf=APpeQnuYR9Twu_pMl55bUQUfYb1dlUGguQ%3A1784982980944&ei=xK1kapmkObKyi-gPhYvDyAo&oq=m%D8%A7%D9%8A%D9%81%D9%88%D9%8BD+14&gs_lp=EhJtb2JpbGUtZ3dzLXdpei1pbWciDm3Yp9mK2YHZiNmGIDE0KgIIADIKEAAYgAQYDRixAzIHEAAYgAQYDTIHEAAYgAQYDTIHEAAYgAQYDTIHEAAYgAQYDUjnMlDjBVjRKnABeACQAQOYAboBoAHCGaoBBDAuMjG4AQHIAQD4AQGYAgygAq0OqAIFwgIHECMYyQIYJ8ICChAAGIAEGIoFGEPCAgoQIxjJAhjqAhgnwgIIEAAYgAQYsQPCAgUQABiABMICCxAAGIAEGLEDGIMBwgIGEAAYHhgKwgIMEAAYgAQYChgLGLEDwgIJEAAYgAQYChgLwgIPEAAYgAQYChgLGLEDGIMBwgINEAAYgAQYDRixAxiDAcICBhAAGB4YDcICCBAAGAgYHhgNmAMLiAYBkgcGMS4xMC4xoAfvOrIHBjAuMTAuMbgHoQ7CBwcyLTUuNi4xyAdxgAgB&sclient=mobile-gws-wiz-img" target="_blank" class="btn-buy">عرض الصور</a>
+                    <a href="tel:0541351393" class="btn-call">اتصل لطلب المنتج</a>
+                </div>
+            </div>
+
+            <!-- المنتج الثالث: شاحن مودم -->
+            <div class="product-card">
+                <div class="product-image">
+                    <a href="https://www.google.com/search?q=%D8%B4%D8%A7%D8%AD%D9%86+%D9%85%D9%88%D8%AF%D9%85&oq=%D8%B4%D8%A7%D8%AD%D9%86+%D9%85%D9%88%D8%AF%D9%85&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDMxNTBqMGo0qAIBsAIB&client=ms-android-xiaomi-terr2-rso2&sourceid=chrome-mobile&source=chrome.ob&ie=UTF-8#sv=CAMScRoyKhBlLVBKLVFrbERZTEZMUmhNMg5QSi1Ra2xEWUxGTFJoTToOajBSemFhWWUzeWFFRk0gBCoxChtfdDYxa2FzT0VNYnlpaS1nUHdKN3F1QTBfMzgSEGUtUEotUWtsRFlMRkxSaE0YADABSgQIARACGAcgzL32pwNKCBACGAEgAigB" target="_blank">
+                        <img src="https://via.placeholder.com/300x220?text=Modem+Charger" alt="شاحن مودم">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <div class="product-title">شاحن مودم (Modem Charger)</div>
+                    <p class="product-description">محول طاقة لتشغيل المودم والراوتر بكفاءة.</p>
+                    <div class="product-price">16 دولار</div>
+                    <a href="https://www.google.com/search?q=%D8%B4%D8%A7%D8%AD%D9%86+%D9%85%D9%88%D8%AF%D9%85&oq=%D8%B4%D8%A7%D8%AD%D9%86+%D9%85%D9%88%D8%AF%D9%85&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDMxNTBqMGo0qAIBsAIB&client=ms-android-xiaomi-terr2-rso2&sourceid=chrome-mobile&source=chrome.ob&ie=UTF-8" target="_blank" class="btn-buy">عرض الصور</a>
+                    <a href="tel:0541351393" class="btn-call">اتصل لطلب المنتج</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; وادي كنس 2026</p>
+    </footer>
+
+</body>
+</html>
